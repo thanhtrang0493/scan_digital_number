@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultActivity">
+
+    <LinearLayout
+        android:padding="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:paddingRight="20dp"
+            android:text="ID: ABCD"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:paddingRight="20dp"
+            android:text="Reading Result:"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:hint=""
+            android:id="@+id/edtResult"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textColor="#b2b0b0"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/imgResult"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:text="OK"
+        android:id="@+id/btnOK"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_height="50dp"
+        android:background="@android:color/holo_blue_dark"/>
+</RelativeLayout>

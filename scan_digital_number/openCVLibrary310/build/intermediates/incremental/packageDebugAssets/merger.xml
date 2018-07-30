@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="D:\example\scan_digital_number\openCVLibrary310\src\main\assets"/><source path="D:\example\scan_digital_number\openCVLibrary310\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="D:\example\scan_digital_number\openCVLibrary310\src\debug\assets"/></dataSet></merger>
