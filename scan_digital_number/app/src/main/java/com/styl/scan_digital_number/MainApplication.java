@@ -1,7 +1,9 @@
 package com.styl.scan_digital_number;
 
 import android.app.Application;
+import android.content.Context;
 import android.content.res.AssetManager;
+import android.support.multidex.MultiDex;
 import android.util.*;
 
 import java.io.InputStream;
@@ -18,6 +20,7 @@ public class MainApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+
         // start copy file here, copy vie.trainneddata from assets to external storage ../tessdata/vie.trainneddata
         // the data path, must contain sub folder call "tessdata", if not the lib will not work.
         instance = this;
