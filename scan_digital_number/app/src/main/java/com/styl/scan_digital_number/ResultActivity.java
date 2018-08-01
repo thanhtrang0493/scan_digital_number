@@ -7,6 +7,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.styl.scan_digital_number.utils.Constants;
+import com.styl.scan_digital_number.utils.Utils;
 
 public class ResultActivity extends AppCompatActivity {
 
@@ -16,6 +20,7 @@ public class ResultActivity extends AppCompatActivity {
     private EditText edtResult;
     private ImageView imgResult;
     private Button btnOK;
+    private TextView txtId;
 
     private String result;
     private Bitmap bitmap;
@@ -38,6 +43,8 @@ public class ResultActivity extends AppCompatActivity {
     }
 
     private void bindData() {
+        txtId.setText("ID: " + Constants.ID_USER);
+
         if (result != null)
             edtResult.setText(result);
 
@@ -49,6 +56,7 @@ public class ResultActivity extends AppCompatActivity {
         edtResult = findViewById(R.id.edtResult);
         imgResult = findViewById(R.id.imgResult);
         btnOK = findViewById(R.id.btnOK);
+        txtId = findViewById(R.id.txtId);
 
         btnOK.setOnClickListener(new View.OnClickListener() {
             @Override

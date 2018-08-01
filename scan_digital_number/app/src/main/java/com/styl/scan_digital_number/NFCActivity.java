@@ -6,8 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.styl.scan_digital_number.nfc.NFCConfig;
-import com.styl.scan_digital_number.nfc.NFCListener;
+import com.styl.scan_digital_number.nfc.config.NFCConfig;
+import com.styl.scan_digital_number.nfc.listener.NFCListener;
+import com.styl.scan_digital_number.utils.Constants;
 
 public class NFCActivity extends AppCompatActivity implements NFCListener {
 
@@ -42,6 +43,15 @@ public class NFCActivity extends AppCompatActivity implements NFCListener {
     @Override
     public void onReadTagSuccess(String response) {
         textView.setText(response);
+        startScanDigitalNumberActivity(response);
+    }
+
+    private void startScanDigitalNumberActivity(String idUser) {
+        Constants.ID_USER = idUser;
+        Intent intent = new Intent(NFCActivity.this, MainActivity.class);
+        this.startActivity(intent);
+
+        this.finish();
     }
 
     @Override
